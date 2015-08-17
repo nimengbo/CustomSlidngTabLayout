@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/grey_f1f1f1"
-        app:defaultTextColor="@color/grey_8b8b8b"
+        app:defaultTextColor="@android:color/holo_green_dark"
         app:BottomLineColor="@color/grey_cccccc"
         app:BottomLineHeight="1px"
         app:IndicatorHeight="2dp"

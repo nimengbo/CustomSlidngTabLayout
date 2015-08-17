@@ -267,6 +267,7 @@ public class CustomSlidingTabLayout extends HorizontalScrollView {
     protected TextView createDefaultTabView(Context context) {
         TextView textView = new TextView(context);
         textView.setGravity(Gravity.CENTER);
+        textView.setTextColor(dTextColor);
         // mTextSize is sp
         textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, mTextSize);
         if(mNeedBold) {
@@ -323,6 +324,9 @@ public class CustomSlidingTabLayout extends HorizontalScrollView {
             }
             if (tabTitleView != null) {
                 tabTitleView.setText(adapter.getPageTitle(i));
+                if(i == 0 ){
+                    tabTitleView.setTextColor(sTextColor);
+                }
             }
             tabView.setOnClickListener(tabClickListener);
             mTextViews.add(tabTitleView);
