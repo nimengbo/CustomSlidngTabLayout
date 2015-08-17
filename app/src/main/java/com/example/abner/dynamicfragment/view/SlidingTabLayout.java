@@ -54,6 +54,13 @@ import java.util.ArrayList;
  * The views used as tabs can be customized by calling {@link #setCustomTabView(int, int)},
  * providing the layout ID of your custom layout.
  */
+
+/**
+ * Modify by Abner on 15/8/17.
+ * QQ 230877476
+ * Email nimengbo@gmail.com
+ * github https://github.com/nimengbo
+ */
 public class SlidingTabLayout extends HorizontalScrollView {
 
     /**

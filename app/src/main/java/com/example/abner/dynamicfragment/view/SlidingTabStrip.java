@@ -25,6 +25,12 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.LinearLayout;
 
+/**
+ * Modify by Abner on 15/8/17.
+ * QQ 230877476
+ * Email nimengbo@gmail.com
+ * github https://github.com/nimengbo
+ */
 class SlidingTabStrip extends LinearLayout {
 
     private static final int DEFAULT_BOTTOM_BORDER_THICKNESS_DIPS = 2;
