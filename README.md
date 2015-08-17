@@ -47,36 +47,50 @@ SlidingTabStrip 主要通过 SlidingTabLayout来设置，在SlidingTabLayout中�
 
 ```
 
-也可以在java中可以如下配置
+也可以在java中可以调用如下方法设置
 
+
+设置字体大小
 ```java
 
 public void setTextSize(int mTextSize) {
     this.mTextSize = mTextSize;
 }
-
+```
+设置底部分割线颜色
+```java
 public void setBottomLineColor(int color) {
     mTabStrip.setDefaultBottomBorderColor(color);
 }
-
+```
+设置是否需要全屏均等分割
+```java
 public void setShouldExpand(boolean b) {
     mShouldExpand = b;
 }
-
+```
+设置底部分割线高度
+```java
 //set bottom line height
 public void setBottomHeight(int height) {
     mTabStrip.setBottomBorderThickness(height);
 }
-
+```
+设置底部指示器高度
+```java
 // set bottom indicator height
 public void setIndicatorHeight(int height) {
     mTabStrip.setSelectedIndicatorThickness(height);
 }
-
+```
+设置默认text颜色
+```java
 public void setDTextColor(int defaultTextColor) {
     this.dTextColor = defaultTextColor;
 }
-
+```
+设置选中text颜色
+```java
 public void setSTextColor(int selectedTextColor) {
     this.sTextColor = selectedTextColor;
 }
