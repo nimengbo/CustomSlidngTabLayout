@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SlidingTabLayout">
+        <attr name="defaultTextColor" format="color"/>
+        <attr name="selectedTextColor" format="color"/>
+        <attr name="shouldExpand" format="boolean"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="IndicatorHeight" format="dimension"/>
+        <attr name="BottomLineHeight" format="dimension"/>
+        <attr name="BottomLineColor" format="color"/>
+        <attr name="needBold" format="boolean"/>
+    </declare-styleable>
+</resources>
