@@ -41,7 +41,7 @@ public class MainActivity extends FragmentActivity {
         String[] strs = {"蒙版","蒙版哈哈哈哈","蒙版哈","蒙版呵呵呵呵呵呵呵呵呵","蒙版","蒙版哈哈哈哈","蒙版哈","蒙版呵呵呵呵呵呵呵呵呵","蒙版","蒙版哈哈哈哈","蒙版哈","蒙版呵呵呵呵呵呵呵呵呵"};
         for(int i = 0 ; i < 11 ; i++){
             mTabs.add(new ContentPageItem(
-                    "title " + strs[i], // Title
+                    strs[i], // Title
                     getResources().getColor(R.color.red_e73a3d), // Indicator color
                     Color.TRANSPARENT // Divider color
             ));

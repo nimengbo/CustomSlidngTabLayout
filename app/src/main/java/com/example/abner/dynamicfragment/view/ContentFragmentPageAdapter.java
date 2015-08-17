@@ -35,7 +35,7 @@ public class ContentFragmentPageAdapter extends FragmentPagerAdapter {
         Log.d("ContentFragment", "getItem " + i);
         ContentModel model = new ContentModel();
         model.setPostion(i);
-        model.setContent(mTabs.get(i).getTitle().toString());
+        model.setContent(" content : " + mTabs.get(i).getTitle().toString());
         return ContentFragment.newInstance(model);
     }
 
