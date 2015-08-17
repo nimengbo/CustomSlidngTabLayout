@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="SlidingTabLayout">
+    <declare-styleable name="CustomSlidingTabLayout">
         <attr name="defaultTextColor" format="color"/>
         <attr name="selectedTextColor" format="color"/>
         <attr name="shouldExpand" format="boolean"/>

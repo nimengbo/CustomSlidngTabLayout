@@ -48,7 +48,7 @@ public class ContentFragmentPageAdapter extends FragmentPagerAdapter {
 
     /**
      * Return the title of the item at {@code position}. This is important as what this method
-     * returns is what is displayed in the {@link SlidingTabLayout}.
+     * returns is what is displayed in the {@link CustomSlidingTabLayout}.
      * <p/>
      * Here we return the value returned from {@link ContentPageItem#getTitle()}.
      */

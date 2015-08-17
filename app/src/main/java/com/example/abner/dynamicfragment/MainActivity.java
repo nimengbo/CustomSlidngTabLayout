@@ -1,27 +1,23 @@
 package com.example.abner.dynamicfragment;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.example.abner.dynamicfragment.view.ContentFragmentPageAdapter;
 import com.example.abner.dynamicfragment.view.ContentPageItem;
-import com.example.abner.dynamicfragment.view.SlidingTabLayout;
+import com.example.abner.dynamicfragment.view.CustomSlidingTabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends FragmentActivity {
-    private SlidingTabLayout mSlidingTabLayout;
+    private CustomSlidingTabLayout mCustomSlidingTabLayout;
 
     /**
-     * A {@link ViewPager} which will be used in conjunction with the {@link SlidingTabLayout} above.
+     * A {@link ViewPager} which will be used in conjunction with the {@link CustomSlidingTabLayout} above.
      */
     private ViewPager mViewPager;
 
@@ -58,16 +54,16 @@ public class MainActivity extends FragmentActivity {
         // BEGIN_INCLUDE (setup_slidingtablayout)
         // Give the SlidingTabLayout the ViewPager, this must be done AFTER the ViewPager has had
         // it's PagerAdapter set.
-        mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
+        mCustomSlidingTabLayout = (CustomSlidingTabLayout) findViewById(R.id.sliding_tabs);
         // setIndicatorHeight
 //        mSlidingTabLayout.setIndicatorHeight(dip2px(this, 4));
 //        // setBottomHeight
 //        mSlidingTabLayout.setBottomHeight(0);
-        mSlidingTabLayout.setViewPager(mViewPager);
+        mCustomSlidingTabLayout.setViewPager(mViewPager);
         // BEGIN_INCLUDE (tab_colorizer)
         // Set a TabColorizer to customize the indicator and divider colors. Here we just retrieve
         // the tab at the position, and return it's set color
-        mSlidingTabLayout.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
+        mCustomSlidingTabLayout.setCustomTabColorizer(new CustomSlidingTabLayout.TabColorizer() {
 
             @Override
             public int getIndicatorColor(int position) {

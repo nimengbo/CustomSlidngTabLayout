@@ -31,7 +31,7 @@ import android.widget.LinearLayout;
  * Email nimengbo@gmail.com
  * github https://github.com/nimengbo
  */
-class SlidingTabStrip extends LinearLayout {
+class CustomSlidingTabStrip extends LinearLayout {
 
     private static final int DEFAULT_BOTTOM_BORDER_THICKNESS_DIPS = 2;
     private static final byte DEFAULT_BOTTOM_BORDER_COLOR_ALPHA = 0x26;
@@ -56,14 +56,14 @@ class SlidingTabStrip extends LinearLayout {
     private int mSelectedPosition;
     private float mSelectionOffset;
 
-    private SlidingTabLayout.TabColorizer mCustomTabColorizer;
+    private CustomSlidingTabLayout.TabColorizer mCustomTabColorizer;
     private final SimpleTabColorizer mDefaultTabColorizer;
 
-    SlidingTabStrip(Context context) {
+    CustomSlidingTabStrip(Context context) {
         this(context, null);
     }
 
-    SlidingTabStrip(Context context, AttributeSet attrs) {
+    CustomSlidingTabStrip(Context context, AttributeSet attrs) {
         super(context, attrs);
         setWillNotDraw(false);
 
@@ -109,7 +109,7 @@ class SlidingTabStrip extends LinearLayout {
         this.mBottomBorderThickness = mBottomBorderThickness;
     }
 
-    void setCustomTabColorizer(SlidingTabLayout.TabColorizer customTabColorizer) {
+    void setCustomTabColorizer(CustomSlidingTabLayout.TabColorizer customTabColorizer) {
         mCustomTabColorizer = customTabColorizer;
         invalidate();
     }
@@ -139,7 +139,7 @@ class SlidingTabStrip extends LinearLayout {
         final int height = getHeight();
         final int childCount = getChildCount();
         final int dividerHeightPx = (int) (Math.min(Math.max(0f, mDividerHeight), 1f) * height);
-        final SlidingTabLayout.TabColorizer tabColorizer = mCustomTabColorizer != null
+        final CustomSlidingTabLayout.TabColorizer tabColorizer = mCustomTabColorizer != null
                 ? mCustomTabColorizer
                 : mDefaultTabColorizer;
 
@@ -204,7 +204,7 @@ class SlidingTabStrip extends LinearLayout {
         return Color.rgb((int) r, (int) g, (int) b);
     }
 
-    private static class SimpleTabColorizer implements SlidingTabLayout.TabColorizer {
+    private static class SimpleTabColorizer implements CustomSlidingTabLayout.TabColorizer {
         private int[] mIndicatorColors;
         private int[] mDividerColors;
 

@@ -4,7 +4,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <com.example.abner.dynamicfragment.view.SlidingTabLayout
+    <com.example.abner.dynamicfragment.view.CustomSlidingTabLayout
           android:id="@+id/sliding_tabs"
           android:layout_width="match_parent"
           android:layout_height="wrap_content" />

@@ -27,14 +27,14 @@ public class ContentPageItem {
     }
 
     /**
-     * @return the color to be used for indicator on the {@link SlidingTabLayout}
+     * @return the color to be used for indicator on the {@link CustomSlidingTabLayout}
      */
     public int getIndicatorColor() {
         return mIndicatorColor;
     }
 
     /**
-     * @return the color to be used for right divider on the {@link SlidingTabLayout}
+     * @return the color to be used for right divider on the {@link CustomSlidingTabLayout}
      */
     public int getDividerColor() {
         return mDividerColor;

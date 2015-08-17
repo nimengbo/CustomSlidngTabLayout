@@ -61,7 +61,7 @@ import java.util.ArrayList;
  * Email nimengbo@gmail.com
  * github https://github.com/nimengbo
  */
-public class SlidingTabLayout extends HorizontalScrollView {
+public class CustomSlidingTabLayout extends HorizontalScrollView {
 
     /**
      * Allows complete control over the colors drawn in the tab layout. Set with
@@ -111,17 +111,17 @@ public class SlidingTabLayout extends HorizontalScrollView {
     private ViewPager mViewPager;
     private ViewPager.OnPageChangeListener mViewPagerPageChangeListener;
 
-    private final SlidingTabStrip mTabStrip;
+    private final CustomSlidingTabStrip mTabStrip;
 
-    public SlidingTabLayout(Context context) {
+    public CustomSlidingTabLayout(Context context) {
         this(context, null);
     }
 
-    public SlidingTabLayout(Context context, AttributeSet attrs) {
+    public CustomSlidingTabLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public SlidingTabLayout(Context context, AttributeSet attrs, int defStyle) {
+    public CustomSlidingTabLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
         // Disable the Scroll Bar
@@ -129,29 +129,29 @@ public class SlidingTabLayout extends HorizontalScrollView {
         // Make sure that the Tab Strips fills this View
         setFillViewport(true);
 
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.SlidingTabLayout, 0, 0);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.CustomSlidingTabLayout, 0, 0);
 
-        setShouldExpand(ta.getBoolean(R.styleable.SlidingTabLayout_shouldExpand, false));
+        setShouldExpand(ta.getBoolean(R.styleable.CustomSlidingTabLayout_shouldExpand, false));
 
-        dTextColor = ta.getColor(R.styleable.SlidingTabLayout_defaultTextColor
+        dTextColor = ta.getColor(R.styleable.CustomSlidingTabLayout_defaultTextColor
                 , Color.BLACK);
-        sTextColor = ta.getColor(R.styleable.SlidingTabLayout_selectedTextColor
+        sTextColor = ta.getColor(R.styleable.CustomSlidingTabLayout_selectedTextColor
                 , Color.RED);
-        mTextSize = ta.getDimensionPixelOffset(R.styleable.SlidingTabLayout_textSize, TAB_VIEW_TEXT_SIZE_SP);
+        mTextSize = ta.getDimensionPixelOffset(R.styleable.CustomSlidingTabLayout_textSize, TAB_VIEW_TEXT_SIZE_SP);
 
-        mNeedBold = ta.getBoolean(R.styleable.SlidingTabLayout_needBold,false);
+        mNeedBold = ta.getBoolean(R.styleable.CustomSlidingTabLayout_needBold,false);
 
         mTitleOffset = (int) (TITLE_OFFSET_DIPS * getResources().getDisplayMetrics().density);
 
-        mTabStrip = new SlidingTabStrip(context);
+        mTabStrip = new CustomSlidingTabStrip(context);
         addView(mTabStrip, LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 
         // mTabStrip attrs
-        int mBottomLineColor = ta.getColor(R.styleable.SlidingTabLayout_BottomLineColor
+        int mBottomLineColor = ta.getColor(R.styleable.CustomSlidingTabLayout_BottomLineColor
                 , getResources().getColor(R.color.grey_cccccc));
-        int mIndicatorHeight = ta.getDimensionPixelOffset(R.styleable.SlidingTabLayout_IndicatorHeight,
+        int mIndicatorHeight = ta.getDimensionPixelOffset(R.styleable.CustomSlidingTabLayout_IndicatorHeight,
                 DensityUtils.dip2px(getContext(), 6));
-        int mBottomLineHeight = ta.getDimensionPixelOffset(R.styleable.SlidingTabLayout_BottomLineHeight, 0);
+        int mBottomLineHeight = ta.getDimensionPixelOffset(R.styleable.CustomSlidingTabLayout_BottomLineHeight, 0);
 
         setBottomHeight(mBottomLineHeight);
 
@@ -225,7 +225,7 @@ public class SlidingTabLayout extends HorizontalScrollView {
     }
 
     /**
-     * Set the {@link ViewPager.OnPageChangeListener}. When using {@link SlidingTabLayout} you are
+     * Set the {@link ViewPager.OnPageChangeListener}. When using {@link CustomSlidingTabLayout} you are
      * required to set any {@link ViewPager.OnPageChangeListener} through this method. This is so
      * that the layout can update it's scroll position correctly.
      *
