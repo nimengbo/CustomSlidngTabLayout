@@ -2,7 +2,8 @@
 
 修改自https://github.com/nispok/slidingtabs
 
-主要把一些常用的属性抽离出来了
+源码中的属性没有抽离成自定义，主要把一些常用的属性抽离出来了，包括 SlidingTabStrip、SlidingTabLayout。
+SlidingTabStrip 主要通过 SlidingTabLayout来设置，在SlidingTabLayout中把方法和属性暴露出来
 
 ## 效果如图
 
